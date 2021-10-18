@@ -14,7 +14,56 @@ Ex:
 
 void Ex3(int in_arr[], int n){
 	//Your codes here
+	int Length = 1;
+    int max = 1;
+    int start = 0;
+    int end = 0;
+
+    for (int i = 0; i < n - 1; i++)
+    {
+        if (in_arr[i] < in_arr[i + 1])
+        {
+            Length++;
+            if (Length > max)
+            {
+                max = Length;
+                start = i + 2 - Length; 
+                end = i + 2;
+            }
+
+        }
+        else
+            Length = 1;
+    }
+	printf("\nIncreasing");
+    for (int i = start; i < end; i++)
+        printf("%2d", in_arr[i]);
 	
+
+	Length = 1;
+     max = 1;
+     start = 0;
+    end = 0;
+
+    for (int i = 0; i < n - 1; i++)
+    {
+        if (in_arr[i] > in_arr[i + 1])
+        {
+            Length++;
+            if (Length > max)
+            {
+                max = Length;
+                start = i + 2 - Length; 
+                end = i + 2;
+            }
+
+        }
+        else
+            Length = 1;
+    }
+	printf(" Decreasing");
+    for (int i = start; i < end; i++)
+        printf("%2d", in_arr[i]);
 }
 
 int main(int argc, char *argv[]) {
