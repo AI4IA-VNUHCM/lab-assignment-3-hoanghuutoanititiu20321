@@ -17,9 +17,8 @@ void Ex1(int arr[], int n){
     for (int i = 0, j = n - 1; i < j; i++, j--) {
     if (arr[i] != arr[j])
         printf("asymmetric"); 
-	
 	}
- printf("symmetric");
+ 	printf("symmetric");
 }
 
 int main(int argc, char *argv[]) {

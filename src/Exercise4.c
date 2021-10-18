@@ -14,7 +14,31 @@ ______________________________________
 
 int Ex4(int arr[], int n){
 	//Your codes here
-	
+	int count = 0;
+	for (int i = 0; i < n - 1; i++)
+	{
+		if (!((arr[i] < arr[i + 1]) || (arr[i] == arr[i + 1])))
+		{
+			count++;
+		}
+		}
+	if (count == 0)
+	{
+		return 1;
+	}
+	for (int i = 0; i < n - 1; i++)
+	{
+		if (!((arr[i] > arr[i + 1]) || (arr[i] == arr[i + 1])))
+		{
+			count++;
+		}
+	}
+	if (count == 0)
+	{
+		return 1;
+	}
+	else
+		return 0;
 }
 
 int main(int argc, char *argv[]) {
